@@ -1,0 +1,33 @@
+How to use git ?
+1.安装git 申请git账户
+2.创建版本库
+	$mkdir dirname
+	$cd dirname
+	$git init
+
+	//初始化这个目录，变成git可以管理的目录
+3.与远程库链接
+首先在github网站创建一个新repository
+得到这个仓库的ssh链接
+在本地dirname下执行代码
+	$git remote add origin git@github.com:553672759/xxx.git
+	//从git@github开始就是自己代码了
+	$git push -u origin master
+	//将所有的内容都推送到远程库
+
+ps:
+	//删除与远程库的连接
+	$ git remote rm origin
+常用命令
+	git init //初始化git仓库
+	git add .//吧当前目录下代码加入git跟踪
+	git add <file>//把当前文件加入git跟踪
+	git commit -m ""//相当于写点提交信息
+	git push -u origin master
+	git clone git@github...........
+	git fetch origin
+	git merge origin/master
+	git status
+	git add .
+	git rm a.c
+	git rm -r gittest//删除目录：
