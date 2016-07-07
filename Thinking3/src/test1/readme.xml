@@ -1,0 +1,21 @@
+<body>
+	<random>
+		<text>
+		Random类可的对象，可以设置随机数种子，生成固定的随机数。
+		</text>
+	</random>
+	<关系运算符>
+		<text>
+		==	!= 比较的是对象的引用
+		如果想比较对象，该用equals(),but自己定义的类型无效。
+		基本数据类型则可直接用==  ！=
+		</text>
+		<eg>
+		Integer n1=new Integer(47);
+		Integer n2=new Integer(47);
+		println(n1==n2);//false
+		println(n1!=n2);//true
+		//对象相同但是对象的引用不同
+		</eg>
+	</关系运算符>
+</body>
