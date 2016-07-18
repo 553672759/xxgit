@@ -1,4 +1,4 @@
-How to use git ?
+﻿How to use git ?
 1.安装git 申请git账户
 2.创建版本库
 	$mkdir dirname
@@ -20,7 +20,7 @@ ps:
 	$ git remote rm origin
 常用命令
 	git init //初始化git仓库
-	git add .//吧当前目录下代码加入git跟踪
+	git add .//把当前目录下代码加入git跟踪
 	git add <file>//把当前文件加入git跟踪
 	git commit -m ""//相当于写点提交信息
 	git push -u origin master
@@ -31,3 +31,4 @@ ps:
 	git add .
 	git rm a.c
 	git rm -r gittest//删除目录：
+
