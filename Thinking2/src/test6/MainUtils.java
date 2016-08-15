@@ -1,10 +1,10 @@
-package test6;
+ï»¿package test6;
 
 import java.util.Scanner;
 
 public class MainUtils {
 	public static void main(String[] args){
-		System.out.println("ÇëÊäÈëÒ»ĞĞ×Ö·û´®");
+		System.out.println("è¯·è¾“å…¥ä¸€è¡Œå­—ç¬¦ä¸²");
 		Scanner in= new Scanner(System.in);
 		System.out.println(storage(in.nextLine()));		
 	}

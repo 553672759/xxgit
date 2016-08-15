@@ -1,8 +1,8 @@
-package test3;
+ï»¿package test3;
 
 public class ATypeName {
 	public static void getType(Object o){
-		System.out.println("ÀàĞÍÊÇ£º"+o.getClass());
+		System.out.println("ç±»å‹æ˜¯ï¼š"+o.getClass());
 	}
 }
 
