@@ -26,7 +26,7 @@ class TestDict(unittest,TestCase):
 
     def test_keyerror(self):
         d = Dict()
-        with self.assertRaises(KeyError):
+        with self.assertRaises(KeyError):#期待抛出指定类型是Error
             value = d['empty']
 
     def test_attrerror(self):
