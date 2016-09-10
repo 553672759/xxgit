@@ -1,5 +1,0 @@
-print("hello,world")
-print("123","456")
-print("100+200=",100+200)
-name=input()
-print(name)
