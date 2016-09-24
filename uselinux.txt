@@ -1,2 +1,5 @@
 ubuntu上安装了两个python，一个是2.7,一个是3.5.运行3.5时要执行python3.
 尝试着使用ubuntu	2016-9-22
+
+在命令前面加上 sudo 是超级管理员权限
+安装deb文件命令sudo dpkg -i 文件名
