@@ -39,6 +39,18 @@ CDATA标记
 		元素描述
 	]>
 	xml文档主题部分	
+外部DTD：
+<!DOCTYPE 根元素名 
+SYSTEM ""
+>
+公用DTD
+
+Schema
+<xs:schema xmlns:xs="URL">
+...
+<xs:schema>
+
+xml命名空间xmlns
 
 
 
