@@ -1,0 +1,9 @@
+<script>
+ function copyUrl()            
+               {
+                  var url = document.getElementById("aa").value
+                  window.clipboardData.setData("Text",url);
+                  alert("已复制链接");
+                }                
+</script>
+<input name="" type="button" id="aa" value="看看复制成功没" onclick="copyUrl()" />
