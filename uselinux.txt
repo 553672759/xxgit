@@ -13,3 +13,8 @@ root权限在窗口种打开文件夹
 第四步：把你所需要的其他目录中的文件进行复制，并且粘贴到当前的这个目录中
 或者：也可以在当前目录窗口中删掉不想要的文件
 用sudo 后面接你要执行的命令
+
+
+重启linux网络，（当修改host之后）
+sudo systemctl restart NetworkManager
+
