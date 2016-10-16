@@ -14,7 +14,12 @@ root权限在窗口种打开文件夹
 或者：也可以在当前目录窗口中删掉不想要的文件
 用sudo 后面接你要执行的命令
 
+linux-hosts文件路径
+/etc/hosts
 
 重启linux网络，（当修改host之后）
 sudo systemctl restart NetworkManager
 
+
+vim查找单词
+控制台输入/github，按n查找下一个
