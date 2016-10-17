@@ -1,3 +1,10 @@
 sys模块
 sys.argv[]	该数组会得到程序运行时的python命令后面的参数.
 可以使用len(),str()来对该变量进行操作
+
+str.upper()返回小写字母转为大写字母的字符串
+
+setdefault()方法,
+dict.setdefault(key,defalut=None)
+查找键key,如果键不存在,设置该键key=None
+
