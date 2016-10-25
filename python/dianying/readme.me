@@ -1,0 +1,11 @@
+简单的利用urllib2,BeautifulSoup来抓取http://www.dy2018.com/中的信息
+由于该站网页的内容是数字方式递增,所以利用数字的循环来访问连续的网页,
+找到网页中的电影标题与下载链接,然后以网页的方式输出.
+
+2016年10月25日21:22:21
+最近想跟新新的网页,但是发现脚本运行异常,
+UserWarning: You provided Unicode markup but also provided a value for from_encoding. Your from_encoding will be ignored.
+  warnings.warn("You provided Unicode markup but also provided a value for from_encoding. Your from_encoding will be ignored.")
+
+然而并没有看懂,找到异常的界面,发现界面被加上了"全局广告",下一步想利用BeautifulSoup模块删除"全局广告"后,再抓取有用信息.
+

@@ -1,4 +1,4 @@
-# coding:utf8
+# coding:Utf8
 '''
 Created on 2016-10-6
 
@@ -18,13 +18,15 @@ class dianyingMain(object):
         self.datas=[]
         
     def run(self):  
-        count=90000
+        count=97390
         i=1        
-        while count<=98000:
-            try:
+        while count<=97390:
+            #try:
                 print i       
                 url=mainurl+'i/'.encode('utf8')+str(count)+'.html'.encode('utf8')
+                print url
                 title,link=self.get_data(url)
+                print title,link
                 data={}
                 data['num']=i
                 data['title']=title
@@ -45,10 +47,8 @@ class dianyingMain(object):
     def get_data(self,url):
         page=self.get_detail(url)
         soup=BeautifulSoup(page,'html.parser',from_encoding='utf-8')
-        
         l=soup.find('td',style="WORD-WRAP: break-word").find("a")
-        link=l.get_text()
-        
+        link=l.get_text()        
         #<div class="title_all"><h1>奔跑吧兄弟-20141010~20141031</h1></div>
         t=soup.find('div',class_="title_all").find('h1')
         title=t.get_text()
