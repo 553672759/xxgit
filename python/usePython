@@ -1,0 +1,13 @@
+pip list 查看当前安装的模块
+
+
+$ sudo apt-get -f install                                   #修复安装
+$ sudo apt-get dist-upgrade                                 #升级系统
+$ sudo apt-get upgrade                                      #更新已安装的包
+$ apt-get source package                                    #下载该包的源代码
+$ sudo apt-get build-dep package                            #安装相关的编译环境
+$ sudo apt-get clean && sudo apt-get autoclean              #清理无用的包
+pip需要安装才能使用，配合virtualenvwrapper会锦上添花。安装过程如下（适用Ubuntu 10.10及以上版本），使用格式为：pip install package。
+$ sudo apt-get install python-pip python-dev build-essential
+$ sudo pip install --upgrade pip
+$ sudo pip install --upgrade virtualenv

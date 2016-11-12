@@ -1,0 +1,14 @@
+在ubuntu服务器下安装包的时候，经常会用到sudo apt-get install 包名 或 sudo pip install 包名，那么两者有什么区别呢？
+
+1.区别
+pip用来安装来自PyPI（https://www.python.org/）的python所有的依赖包，并且可以选择安装任何在PyPI上已上传的先前版本的依赖包，个人认为是python相关的包和第三方包以及各种版本；
+apt-get可以用来安装软件、更新源、也可以用来更新自Ubuntu（https://launchpad.net/ubuntu）的典型依赖包，典型安装即意味着它只是安装（最新发布的，或最近一个的）单一版本，并且我们不能决定我们要安装的依赖包的版本或选择它之前的版本。
+个人认为还是很好区分的：毕竟一个是更新系统级别包，一个是更新一种编程语言级别包（库）。
+
+2.使用
+情况是这样的，如果你需要最新版本的python依赖包，你可以直接使用apt-get,在项目突然需要使用旧版本的依赖包时，你就可以使用virtualenvwrapper和pip来使完美得再安装上一个旧版本的依赖包；
+你可以根据你的喜好选择你喜欢的安装方式。但是，如果你需要安装python包的特定版本，或在virtualenvwrapper中安装包，或安装只托管PyPI上一个包，此时只有pip会帮你解决这个问题了。否则，如果你不介意安装在系统范围的位置使用apt-get或pip都是ok的；
+
+3.安装及应用
+apt-get是可以直接使用的，格式为
+$ sudo apt-get install/delete package

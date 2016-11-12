@@ -5,6 +5,9 @@ ubuntu上安装了两个python，一个是2.7,一个是3.5.运行3.5时要执行
 安装deb文件命令sudo dpkg -i 文件名
 
 
+ggVG vim当中的全选
+
+
 ubuntu中使用root权限复制粘贴文件
 root权限在窗口种打开文件夹
 第一步：打开终端，在命令行里输入sudo nautilus
