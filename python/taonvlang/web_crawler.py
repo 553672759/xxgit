@@ -34,6 +34,7 @@ class web_crawler:
         page=self.get_page(index)
         pattern=re.compile('<div class="list-item".*?pic-word.*?<a href="(.*?)".*?<a class="lady-name.*?user_id=(\d*).*?>(.*?)</a>.*?<strong>(.*?)</strong>.*?<span>(.*?)</span>',re.S)
         items=re.findall(pattern,page)
+        print "items:",items
         content=[]
         for i in items:
             content.append([i[0],i[1],i[2],i[3],i[4]])
@@ -52,7 +53,9 @@ class web_crawler:
             pattern_ids=re.compile('<a class="mm-first" href=".*?album_id=(\d*).*?"')
             pattern_names=re.compile('\s*(.*?)</a></h4>')
             items_ids=re.findall(pattern_ids, page)
+            print "items_ids:",items_ids
             items_names=re.findall(pattern_names,page)
+            print "items_names:",items_names
             
             if len(items_ids)==0:
                 break
@@ -68,7 +71,9 @@ class web_crawler:
         return album_contents
     
     def get_images_urls(self,user_id,album_id):
-        main_url='http://mm.taobao.com/album/json/get_photo_list_tile_data.htm?user_id='+user_id+'&album_id'+album_id+"&page="
+        main_url='http://mm.taobao.com/album/json/get_photo_list_tile_data.htm?user_id='+user_id+'&album_id='+album_id+"&page="
+        #main_url='https://mm.taobao.com/self/album_photo.htm?user_id='+user_id+'&album_id=10000702574&album_flag=0'
+        print "main_url:",main_url
         page_index=1
         images_url=[]
         while(True):
@@ -105,8 +110,7 @@ class web_crawler:
             urls=spider.get_images_urls(user_id,album_id)
             for n in range(len(urls)):
                 print "保存图片"
-                self.save_image('https:'.encode('utf8')+urls[n],
-                                path_album+'/'.encode('utf8')+str(n+1)+'.'.encode('utf8')+'jpg')
+                self.save_image('https:'.encode('utf8')+urls[n],path_album+'/'.encode('utf8')+str(n+1)+'.'.encode('utf8')+'jpg')
     
     def save_image(self,url,f_name):
         resp=urllib.urlopen(url)
@@ -118,8 +122,11 @@ class web_crawler:
         
     def save_all(self,start,end):
         for page_index in range(start,end+1):
+            print page_index
             contents=self.get_contents(page_index)
+            #print contents
             for i in contents:
+                print "i",i[0],i[1],i[2]
                 album_contents=self.get_album_contents(i[1])
                 self.save_images(i[1],i[2],album_contents)
                 
