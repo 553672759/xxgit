@@ -1,27 +1,33 @@
-﻿How to use git ?
-1.安装git 申请git账户
-2.创建版本库
-	$mkdir dirname
-	$cd dirname
-	$git init
+How to use git ?
 
-	//初始化这个目录，变成git可以管理的目录
-3.与远程库链接
-首先在github网站创建一个新repository
-得到这个仓库的ssh链接
-在本地dirname下执行代码
-	$git remote add origin git@github.com:553672759/xxx.git
-	//从git@github开始就是自己代码了
-	$git push -u origin master
-	//将所有的内容都推送到远程库
+1.从头开始的使用流程
+	安装,初始化
+		$mkdir dirname
+		$cd dirname
+		$git init  //初始化这个目录，变成git可以管理的仓库
+	与远程库链接
+		如果是第一次使用这台电脑
+			账号与新电脑绑定:
+			ssh-keygen -t rsa -C "myself@gmail.com"
+			然后再github账户设置里添加ssh,将公钥填写近去就可以了.
+		首先在github网站创建一个新repository
+		得到这个仓库的地址链接
+		在本地dirname下执行代码
+			$git remote add origin git@github.com:553672759/xxx.git
+			//从git@github开始就是自己代码了
+			$git push -u origin master
+			//将所有的内容都推送到远程库
+2.日常使用时的步骤
+	1.修改文件
+	2.查看状态 	git status			(可有可无,最好看一看修改了什么)
+	3.放入暂存区 
+				git add .				(将全部修改放入)
+				git add 文件名			(单个文件放入暂存区)
+	4.提交		git commit -m "备注信息"
+	5.推送到github服务器
+				git push
 
-ps:
-	//删除与远程库的连接
-	$ git remote rm origin
 
-账号与新电脑绑定:
-	ssh-keygen -t rsa -C "myself@gmail.com"
-	然后再github账户设置里添加ssh,将公钥填写近去就可以了.
 	
 常用命令
 	git init //初始化git仓库
@@ -36,4 +42,5 @@ ps:
 	git add .
 	git rm a.c
 	git rm -r gittest//删除目录：
+	git remote rm origin//删除与远程库的连接
 
