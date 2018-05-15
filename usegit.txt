@@ -18,6 +18,11 @@
 ps:
 	//删除与远程库的连接
 	$ git remote rm origin
+
+账号与新电脑绑定:
+	ssh-keygen -t rsa -C "myself@gmail.com"
+	然后再github账户设置里添加ssh,将公钥填写近去就可以了.
+	
 常用命令
 	git init //初始化git仓库
 	git add .//把当前目录下代码加入git跟踪
