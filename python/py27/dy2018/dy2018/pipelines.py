@@ -7,7 +7,13 @@
 
 
 class Dy2018Pipeline(object):
+
+    def __init__(self):
+        self.file=open('imgs.txt','wb')
+
     def process_item(self, item, spider):
-        IMAGES_STORE = '/path/to/valid/dir'
-        ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+        # url=dict(item)['img_urlr']="\n"
+        # self.file.write(url)
+        #IMAGES_STORE = '/path/to/valid/dir'
+        #ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
         return item

@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
+
+# scrapy crawl spidertieba -o items.json
+
 import scrapy
 from scrapy.spiders  import  CrawlSpider,Request,Rule
 from scrapy.linkextractors import LinkExtractor
 from dy2018.items import Dy2018Item
+
 
 class DySpider(CrawlSpider):
     name = 'dy'
@@ -11,6 +15,7 @@ class DySpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(allow=r"/i/d+$"), callback="parse_dy", follow=True),
     )
+
 
     def start_requests(self):
         for i in  range(98550,98560):
@@ -22,7 +27,9 @@ class DySpider(CrawlSpider):
         item=Dy2018Item()
         item['title']=response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
         item['link']=response.xpath('//*[@id="Zoom"]/table[2]/tbody/tr/td/a/@href').extract()
-        item["image_urls"]=response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()[0]
-        print item['image_urls']
-        #print item['link']
+        item['image']=
+        #获取链接,直接将链接图片下载到img文件夹
+        urls=response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()[0]
+        # with open("urls.txt","a+") as file:
+        #     file.write(urls+'\n')
         yield item
