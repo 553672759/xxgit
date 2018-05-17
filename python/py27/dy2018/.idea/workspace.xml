@@ -27,7 +27,28 @@
         <entry file="file://$PROJECT_DIR$/items.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dy2018/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spider.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dy2018/example/mzitu_scrapy/spiders/spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dy2018/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="464">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -96,16 +117,16 @@
         <option value="$PROJECT_DIR$/dy2018/example/链接追踪.py" />
         <option value="$PROJECT_DIR$/dy2018/items.py" />
         <option value="$PROJECT_DIR$/dy2018/example/a.html" />
-        <option value="$PROJECT_DIR$/dy2018/pipelines.py" />
         <option value="$PROJECT_DIR$/items.json" />
         <option value="$PROJECT_DIR$/dy2018/spiders/dy.py" />
         <option value="$PROJECT_DIR$/dy2018/settings.py" />
+        <option value="$PROJECT_DIR$/dy2018/pipelines.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="264" />
-    <option name="y" value="-16" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="738" />
+    <option name="y" value="-19" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -126,6 +147,27 @@
               <item name="dy2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="dy2018" type="462c0819:PsiDirectoryNode" />
               <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dy2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dy2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="mzitu_scrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dy2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="dy2018" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="mzitu_scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dy2018" type="b2602c69:ProjectViewProjectNode" />
@@ -267,7 +309,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19989395" />
@@ -277,7 +319,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3292978" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.42857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994698" visible="true" weight="0.2457627" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994698" weight="0.25123763" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39951575" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,13 +501,6 @@
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dy2018/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../dianying/dianying/spiders/dianying.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -489,16 +524,33 @@
     <entry file="file://$PROJECT_DIR$/items.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dy2018/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="464">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dy2018/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dy2018/example/mzitu_scrapy/spiders/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
