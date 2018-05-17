@@ -17,9 +17,12 @@ class DySpider(CrawlSpider):
     )
 
     def start_requests(self):
-        for i in  range(98552,98554):
+        for i in  range(98500,99000):
+
             url="https://www.dy2018.com/i/"+str(i)+".html"
+            print str(i) + '...open'
             yield scrapy.spiders.Request(url=url,callback=self.parse)
+
 
     def parse(self, response):
         item=Dy2018Item()
