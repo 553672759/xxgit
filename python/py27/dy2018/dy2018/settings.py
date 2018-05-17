@@ -14,12 +14,13 @@ BOT_NAME = 'dy2018'
 SPIDER_MODULES = ['dy2018.spiders']
 NEWSPIDER_MODULE = 'dy2018.spiders'
 
-
+ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+IMAGES_STORE = '/xx/xxgit/python/py27/dy2018/dy2018/img'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dy2018 (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

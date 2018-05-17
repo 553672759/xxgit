@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# scrapy crawl spidertieba -o items.json
+# scrapy crawl dy -o items.json
 
 import scrapy
 from scrapy.spiders  import  CrawlSpider,Request,Rule
 from scrapy.linkextractors import LinkExtractor
 from dy2018.items import Dy2018Item
-
+import urllib2
 
 class DySpider(CrawlSpider):
     name = 'dy'
@@ -16,20 +16,19 @@ class DySpider(CrawlSpider):
         Rule(LinkExtractor(allow=r"/i/d+$"), callback="parse_dy", follow=True),
     )
 
-
     def start_requests(self):
-        for i in  range(98550,98560):
+        for i in  range(98552,98554):
             url="https://www.dy2018.com/i/"+str(i)+".html"
-            #print "url==="+url
-            yield Request(url=url,callback=self.parse)
+            yield scrapy.spiders.Request(url=url,callback=self.parse)
 
     def parse(self, response):
         item=Dy2018Item()
-        item['title']=response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
-        item['link']=response.xpath('//*[@id="Zoom"]/table[2]/tbody/tr/td/a/@href').extract()
-        item['image']=
-        #获取链接,直接将链接图片下载到img文件夹
-        urls=response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()[0]
-        # with open("urls.txt","a+") as file:
-        #     file.write(urls+'\n')
-        yield item
+        link=response.xpath('//*[@id="Zoom"]/table[2]/tbody/tr/td/a/@href').extract()
+        #print "link====="+str(len(link))
+        if (not len(link) == 0):
+            item['link'] = link
+            item['title'] = response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
+            item['image_urls'] = response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()
+            yield item
+
+

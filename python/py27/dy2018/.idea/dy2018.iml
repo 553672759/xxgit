@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7 (test1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="创建文件夹" />
+    <orderEntry type="module" module-name="批量创建文件夹" />
+    <orderEntry type="module" module-name="批量创建文件夹" />
   </component>
 </module>
