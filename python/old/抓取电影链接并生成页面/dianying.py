@@ -4,7 +4,7 @@ Created on 2016-10-6
 
 @author: xx
 '''
-import html_downloader
+#import html_downloader
 import urllib2,re
 import cookielib
 from bs4 import BeautifulSoup
@@ -14,15 +14,15 @@ from warnings import catch_warnings
 class dianyingMain(object):
     
     def __init__(self):
-        self.downloader=html_downloader.Html_Downloader()
+        #self.downloader=html_downloader.Html_Downloader()
         self.datas=[]
         
     def run(self):  
-        count=97390
+        count=99507
         i=1        
-        while count<=97390:
-            #try:
-                print i       
+        while count<=99518:
+            try:
+                print i
                 url=mainurl+'i/'.encode('utf8')+str(count)+'.html'.encode('utf8')
                 print url
                 title,link=self.get_data(url)
@@ -32,7 +32,6 @@ class dianyingMain(object):
                 data['title']=title
                 data['link']=link
                 self.datas.append(data)
-               
             except:
                 print 'This page 404'
             count+=1
@@ -41,8 +40,13 @@ class dianyingMain(object):
             
 
     def get_detail(self,url):
-        resp=urllib2.urlopen(url)
-        return resp.read().decode('gbk')
+        i_headers = {
+            "user-agent":" Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome",
+        }
+        req = urllib2.Request(url, headers=i_headers)
+        resp=urllib2.urlopen(req)
+        #resp=urllib2.urlopen(url,  headers=i_headers)
+        return resp.read()
     
     def get_data(self,url):
         page=self.get_detail(url)
