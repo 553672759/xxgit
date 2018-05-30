@@ -17,7 +17,7 @@ class DySpider(CrawlSpider):
     )
 
     def start_requests(self):
-        for i in  range(98500,99000):
+        for i in  range(98960,99000):
 
             url="https://www.dy2018.com/i/"+str(i)+".html"
             print str(i) + '...open'

@@ -13,4 +13,5 @@ class DianyingItem(scrapy.Item):
     # name = scrapy.Field()
     name = scrapy.Field()
     link = scrapy.Field()
-
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
