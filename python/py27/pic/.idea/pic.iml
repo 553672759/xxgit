@@ -4,8 +4,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7 (test1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="dy2018" />
-    <orderEntry type="module" module-name="dianying" />
-    <orderEntry type="module" module-name="pic" />
   </component>
 </module>

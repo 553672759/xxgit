@@ -1,3 +1,9 @@
-item=[10]
-item["name"]=123
-print item
+class aaa():
+    def aa(self):
+        print 'aa'
+class bbb():
+    def bb(self):
+        print "bb"
+
+if __name__=="__main__":
+    print "cc"

@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="测试" />
     <orderEntry type="module" module-name="Douban" />
+    <orderEntry type="module" module-name="dianying" />
   </component>
 </module>

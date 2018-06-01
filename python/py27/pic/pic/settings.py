@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for dianying project
+# Scrapy settings for pic project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,16 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'dianying'
+BOT_NAME = 'pic'
 
-SPIDER_MODULES = ['dianying.spiders']
-NEWSPIDER_MODULE = 'dianying.spiders'
+SPIDER_MODULES = ['pic.spiders']
+NEWSPIDER_MODULE = 'pic.spiders'
 
-FEED_EXPORT_ENCODING = 'utf-8'
+ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+IMAGES_STORE = '/xx/xxgit/python/py27/pic/pic/img'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'dianying (+http://www.yourdomain.com)'
-
-
-ITEM_PIPELINES = {'dianying.pipelines.MzituScrapyPipeline',2   }
-IMAGES_STORE = 'D:\img'
+#USER_AGENT = 'pic (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -38,7 +36,6 @@ ROBOTSTXT_OBEY = False
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
-COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -52,13 +49,13 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'dianying.middlewares.DianyingSpiderMiddleware': 543,
+#    'pic.middlewares.PicSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'dianying.middlewares.DianyingDownloaderMiddleware': 543,
+#    'pic.middlewares.PicDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -69,9 +66,9 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'dianying.pipelines.DianyingPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'pic.pipelines.PicPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
