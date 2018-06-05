@@ -14,7 +14,9 @@ BOT_NAME = 'pic'
 SPIDER_MODULES = ['pic.spiders']
 NEWSPIDER_MODULE = 'pic.spiders'
 
-ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+ITEM_PIPELINES = {
+                  'pic.dblines.DBPipeline':200
+                  }
 IMAGES_STORE = '/xx/xxgit/python/py27/pic/pic/img'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from pic.items import VideoItem
+from pic.dblines import DBPipeline
 import sys
 
-class DySpider(scrapy.Spider):
-    name = 'dy'
+class DbSpider(scrapy.Spider):
+    pipeline = set([DBPipeline, ])
+    name = 'db'
     allowed_domains = ['dy2018.com']
     url = "https://www.dy2018.com/i/"
     start_urls = [url + "98000.html"]
+
 
     def parse(self, response):
 
@@ -24,7 +27,6 @@ class DySpider(scrapy.Spider):
             item['video_link'] = link
             item['video_name'] = response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
             imglink = response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()
-            item['image_urls'] = imglink
             item['video_img'] =imglink[0].split('/')[-1]
             print "====="+item['video_img']
             yield item

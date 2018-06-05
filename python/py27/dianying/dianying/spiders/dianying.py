@@ -19,21 +19,30 @@ class dianying(scrapy.Spider):
     def parse(self,response):
         reload(sys)
         sys.setdefaultencoding('utf-8')
-        for i in range(98900,98950):
+        for i in range(91875,91880):
             url = "https://www.dy2018.com/i/" + str(i) + ".html"
             print str(i) + '...open'
             yield scrapy.spiders.Request(url=url, callback=self.parse_do)
 
     def parse_do(self, response):
-        items = DianyingItem()
+        item = DianyingItem()
         #取得链接
         link=response.xpath('//*[@id="Zoom"]/table[2]/tbody/tr/td/a/@href').extract()
+        print link
+        if(len(link)==0):
+            print "22222222"
+            link=response.xpath('//*[@id="Zoom"]/table/tbody/tr/td/anchor/a/@').extract()
+            print link
         if(not len(link) == 0):
-            items['link'] =link
-            # 取得名字
-            items['name'] = response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
-            items['image_urls'] = response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()
-            yield items
+
+            item['video_link'] = link
+            item['video_name'] = response.xpath('//*[@id="header"]/div/div[3]/div[2]/div[6]/div[1]/h1/text()').extract()[0]
+            # imglink = response.xpath('//*[@id="Zoom"]/p[1]/img/@src').extract()
+            #
+            # item['video_img'] = imglink[0].split('/')[-1]
+            # print "=====" + item['video_img']
+
+            yield item
 
 
 
