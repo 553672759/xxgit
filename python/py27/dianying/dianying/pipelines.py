@@ -15,7 +15,7 @@ class DianyingPipeline(object):
         host="127.0.0.1"
         port=27017
         dbname='xx'
-        sheetname='test'
+        sheetname='video'
         client = MongoClient(host=host, port=port)
         # 指定数据库
         mydb = client[dbname]
@@ -28,18 +28,18 @@ class DianyingPipeline(object):
         return item
 
 
-
-class MzituScrapyPipeline(ImagesPipeline):
-
-    def get_media_requests(self, item, info):
-        for image_url in item['image_urls']:
-            yield scrapy.Request(image_url)
-
-    def item_completed(self, results, item, info):
-        image_paths = [x['path'] for ok, x in results if ok]
-        if not image_paths:
-            raise DropItem("Item contains no images")
-        item['image_paths'] = image_paths
-        return item
+#
+# class MzituScrapyPipeline(ImagesPipeline):
+#
+#     def get_media_requests(self, item, info):
+#         for image_url in item['image_urls']:
+#             yield scrapy.Request(image_url)
+#
+#     def item_completed(self, results, item, info):
+#         image_paths = [x['path'] for ok, x in results if ok]
+#         if not image_paths:
+#             raise DropItem("Item contains no images")
+#         item['image_paths'] = image_paths
+#         return item
 
 

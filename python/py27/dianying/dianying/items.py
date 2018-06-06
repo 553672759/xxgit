@@ -19,4 +19,6 @@ class DianyingItem(scrapy.Item):
     vidoe_dy = scrapy.Field()
     video_img = scrapy.Field()
     vidoe_jj = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
 

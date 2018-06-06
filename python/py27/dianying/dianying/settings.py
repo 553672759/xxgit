@@ -17,10 +17,10 @@ NEWSPIDER_MODULE = 'dianying.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dianying (+http://www.yourdomain.com)'
+USER_AGENT = "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;"
 
-
-ITEM_PIPELINES = {'dianying.pipelines.MzituScrapyPipeline',2   }
-IMAGES_STORE = 'D:\img'
+# ITEM_PIPELINES = {'dianying.pipelines.MzituScrapyPipeline',2   }
+# IMAGES_STORE = 'D:\img'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
